@@ -1,0 +1,631 @@
+@import "fonts.sass"
+
+*
+	margin: 0
+	padding: 0
+body
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: "GothamPro", sans-serif;    
+	overflow-x: hidden
+	color: #ffffff
+
+h2, h3, h4, a
+	color: #000
+h1
+	font-size: 28px
+	font-size: 50px
+	text-transform: uppercase 
+	line-height: 1.1
+	font-family: "GothamPro-Bold", sans-serif; 
+h2
+	padding-top: 70px
+	margin-left: 15px
+	font-family: "GothamPro-Bold", sans-serif;
+	font-size: 25px
+	color: #000
+
+h3
+h4
+h5
+a 
+	color: #fff
+	text-decoration: none
+
+.header
+	background-image: url("../img/bg_header.jpg") 
+	background-repeat: no-repeat 
+	background-size: cover
+
+	&__top-line
+		display: flex
+		justify-content: space-around 
+		padding-top: 20px 
+		width: 100%
+		max-width: 1170px
+		margin: 0 auto
+	.logo
+		&__img	
+			width: 60px
+			height: 55px
+	&__nav
+		&-link
+			color: #fff
+			margin-right: 50px
+			font-weight: bold
+			font-size: 12px
+
+	&__language
+		a 
+			font-size: 11px
+	&__phone
+		justify-self: center
+		a 
+			font-size: 12px
+	&__phone:focus
+		color: #fff
+	&__phone:hover
+		color: #fff
+
+
+	&__content
+		margin: auto
+		max-width: 830px
+		display: flex
+		justify-content: space-between
+		margin-top: 100px
+		&-left
+			display: flex
+			align-items: start
+			flex-direction: column
+			p
+				font-size: 12px
+				align-self: flex-start
+				padding-top: 10px
+		&-right
+			display: flex
+			align-items: center
+			flex-direction: column
+			span	
+				font-size: 35px
+				font-family: "GothamPro-Bold", sans-serif; 
+			p 
+				margin: 0
+				font-size: 12px
+				padding-bottom: 10px
+		&-descr
+			line-height: 1.1
+
+	&__bottom
+		margin: auto
+		max-width: 830px
+		display: flex
+		justify-content: space-between
+		margin-top: 100px
+		padding-bottom: 25px
+		&-arrow
+			i 
+				font-size: 40px
+				padding-right: 5px
+				color: #a6ba00
+		&-social
+			display: flex
+			align-items: flex-end
+			a 
+				padding-left: 10px
+				i  
+					font-size: 20px
+	
+.main
+	max-width: 1000px
+	margin: auto
+
+
+.tour
+	&__item
+		padding-left: 15px
+		&-bot
+			border-left: 1px solid #d1d1d1
+			border-bottom: 1px solid #d1d1d1
+			display: flex
+		.section-item__description
+			flex-basis: 67%
+			padding-left: 15px
+		h3
+			font-size: 12px
+			color: #A0DC00
+			margin-top: 4px
+			margin-bottom: 0
+			padding-top: 6px
+		h4 
+			font-size: 12px
+			line-height: 11px
+			margin: 0
+			font-family: "GothamPro-Bold", sans-serif;
+
+	.section-item__price
+		background-color: #333333
+		color: #fff
+		h5
+			margin: 21px 10px
+			font-size: 12px
+
+	.section-item__next	
+		display: flex
+		flex-basis: 16.5%
+		justify-content: center
+		align-items: center
+		font-size: 40px
+		background-color: #A6BA00
+
+	.section-item__img
+		img
+			width: 100%
+			object-fit: cover
+
+	.section-item__small
+		margin-top: 152px
+
+	.small
+		margin-bottom: 19px
+
+
+
+
+
+.section-descr
+	h4
+		color: #000
+		font-size: 14px
+		font-family: "GothamPro-Bold", sans-serif;
+	p
+		color: #6d6d6d
+		font-size: 12px
+	&__item
+		border: 1px solid #d1d1d1
+		padding: 45px
+		line-height: 1.2
+		img 
+			width: 62px
+	.col-md-4
+		margin-bottom: 30px
+
+
+.team 
+	line-height: 1.2
+	img 
+		width: 100%
+		height: 270px
+		object-fit: cover
+	h4
+		color: #6d6d6d
+		font-size: 12px
+		padding: 0
+		margin: 0
+	h5
+		color: #000
+		font-size: 13px
+		padding: 0
+		margin: 0
+		font-family: "GothamPro-Bold", sans-serif;
+	a 
+		color: #a8bc07
+	i 
+		font-size: 16px
+	.team-wrap
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 10px
+		border-right: 1px solid #d1d1d1
+		border-left: 1px solid #d1d1d1
+		border-bottom: 1px solid #d1d1d1
+
+.request
+	margin-top: 100px
+	background-color: #383838
+	padding-bottom: 60px
+	color: #000
+	h2
+		color: #fff	
+		padding: 0
+		margin: 0
+		margin-top: 40px
+	h3
+		font-size: 12px
+		margin: 0 0 20px 0
+	h4
+		font-size: 12px
+		line-height: 1.2
+		margin: 0
+	h3, h4
+		color: #909090
+	button
+		background-color: #a6ba00
+		border: none
+		border-radius: 5px
+		width: 150px
+		height: 50px
+	.tel, .name
+		width: 290px
+		height: 50px
+		border-radius: 5px 
+		border: none
+		text-align: center
+	.forma
+		display: flex
+		justify-content: space-between 
+		.button-in
+			display: flex
+			h4
+				margin-left: 25px
+
+		.help-block
+			li
+				color: #fff
+
+
+.reviews
+	h3 	
+		color: #000
+		font-size: 16px
+	h4
+		font-size: 12px
+	h4, h5
+		color: #636363
+	h4, h3
+		margin: 0
+		padding: 5px 0
+	h5 
+		padding: 0 0 10px 30px
+	.personality
+		display: flex
+		line-height: 1.2
+		img 
+			width: 70px
+			height: 70px
+			margin: 30px 20px
+	.reviews-item
+		border: 1px solid #d1d1d1
+		width: 47%	
+		margin-left: 20px
+	
+	a 	
+		color: #a6ba00
+	.name 
+		margin-top: 40px
+		margin-left: 15px
+
+
+
+
+.faq
+	.section-title
+		h2
+			margin-left: 0
+	button
+		background-color: #a6ba00
+		color: #000
+		font-style: 12px
+		padding: 0 30px
+		border: none
+		border-radius: 5px
+		height: 45px
+	h5 
+		color: #6d6d6d
+		font-size: 12px
+
+
+.block
+	user-select: none
+	color: #000
+	background-color: #fff
+	border: 1px solid #f0f0f0
+	margin: 20px auto 0
+	
+	.title
+		cursor: pointer
+		padding: 10px 25px
+		position: relative
+		display: flex
+		justify-content: space-between
+		color: #000
+		font-family: "GothamPro-Bold", sans-serif;
+		font-size: 13px
+		&:after, .active:after
+			content: ""
+			position: absolute
+			width: 15px
+			height: 15px
+			right: 10px
+
+		&:after 
+			background: url("../img/plus.png") no-repeat
+			top: 15px
+
+	.active:after 
+		background: url("../img/minus.png") no-repeat
+		top: 21px 
+	.active:before
+		content: ""
+		height: 1px
+		left: 25px
+		margin-top: 35px
+		position: absolute
+		width: 300px
+		background-color: #f0f0f0
+		color: #000
+		font-family: "GothamPro-Bold", sans-serif;	
+	.content
+		padding: 10px 25px
+		font-size: 14px
+		display: none
+	
+	.title.active + .content
+		display: block
+
+.block:first-child
+	margin-top: 100px
+
+
+
+.footer
+	margin-top: 80px
+	background-color: #383838
+	.request
+		margin-top: 0
+		position: relative
+		.help-block
+			li
+				color: #fff
+				list-style-type: disc 
+	.forma:after 
+		content: ""
+		position: absolute
+		width: 100%
+		background-color: #494546
+		height: 1px
+		left: 0
+		margin-top: 100px
+	.footer-bot
+		display: flex
+		flex-wrap: wrap
+		font-size: 13px
+		display: flex
+		margin-top: 25px
+		margin-bottom: 30px
+	.logo
+		width: 60px
+		height: 55px
+	h3 
+		font-size: 12px
+	a
+		color: #fff
+		cursor: pointer
+		ul
+			margin: 0
+			font-size: 13px
+		li 
+			list-style-type: none
+	.footer-nav
+		ul
+			padding: 0
+			margin: 0
+	.footer-social
+		p
+			margin: 0
+	.arrow
+		img 
+			width: 45px
+			border-radius: 5px
+		
+
+
+
+
+
+
+@media only screen and (max-width : 1200px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)		
+	.header 	
+		.header-left 	
+			h1 	
+				margin-left: 110px
+				font-size: 40px
+		.header-chevron
+			a 
+				margin-left: 10px
+		.header-social
+			padding-left: 170px
+	.tour 
+		.item-bot 
+			.section-item__description 
+				flex-basis: 65.5%
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.header 
+		min-height: 560px
+		.header-nav, .header-language
+			margin-top: 15px
+		.fa-phone
+			margin-top: 17px
+		.header-nav__link
+			margin-right: 20px
+		.header-nav__link:last-child
+			margin-right: 0
+		.header-left 	
+			h1 	
+				font-size: 35px
+				margin-top: 35px
+		.header-chevron
+			padding: 30px 0
+		.header-social
+			padding: 45px 0 0 115px 	
+		.phone 
+			display: none
+		.fa-phone
+			display: block
+	.tour
+		.item-bot 
+			.section-item__description
+				flex-basis: 53.5%
+		.small 
+			margin-bottom: 14px
+	.section-descr
+		.section-descr__item
+			padding: 20px
+	.section-item__small
+		.section-item__img
+			img 
+				height: 130px
+
+	.team 
+		img
+			height: 210px
+		h5 
+			font-size: 12px
+
+	.request
+		display: flex
+		align-items: center
+		align-content: center 
+		justify-content: center
+		overflow: auto
+		.forma
+			margin-left: 180px
+			display: flex
+			flex-direction: column 
+			input 
+				margin: 10px 0
+				width: 370px
+			h4
+				margin: 5px 0 0 50px
+			// .button-in
+			// 	display: flex
+
+	.footer 
+		.request
+			h2 
+				margin: 0
+		.forma
+			margin: 0
+		.forma:after 
+			display: none
+		.request
+			.forma
+				button
+					margin: 0
+		.request:before 
+			content: ''
+			width: 100%
+			background-color: #494546
+			height: 1px
+			position: absolute
+			margin-top: 135px
+		.arrow
+			display: flex
+			justify-content: center
+		.col-xs-6
+			margin-bottom: 20px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+
+	.header 
+		// .header-nav, .header-language
+		// 	margin-top: 15px
+		.fa-phone
+			margin-top: 17px
+		.header-nav__link
+			margin-left: 8px
+			margin-right: 0
+		.header-left
+			display: flex
+			align-items: center
+			h1 	
+				margin-left: 0
+			p 
+				padding-left: 45px
+		.header-right 	
+			display: flex
+			flex-direction: row
+			align-items: flex-start
+		.header-language
+			display: none
+		.mini-descr
+			margin-left: 30px
+		.header-chevron, .header-social
+			display: flex
+			justify-content: center
+			margin: 0
+			padding-left: 0
+
+	.tour
+		.item-bot 
+			.section-item__description
+				flex-basis: 64%
+		.section-item__small
+			margin-top: 0px
+			.small
+				margin: 30px 0
+	.section-descr 
+		.section-descr__item 
+			margin: 0 70px
+	.team
+		.team-item
+			margin: 20px 70px
+
+	.request
+		.forma
+			display: flex
+			align-items: center
+			margin: 0
+			input 
+				margin: 10px 0
+				width: 250px
+			h4
+				margin: 5px 0 0 50px
+				font-size: 8px
+			button
+				margin-left: 52px
+	.reviews 
+		.reviews-item
+			width: 92%
+			margin-bottom: 30px
+	.block:first-child 
+		margin-top: 60px
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	.header
+		.col-sm-6
+			padding: 0 5px 
+		.header-left
+			p 
+				padding-left: 0
+		.header-right
+			.mini-descr
+				margin-left: 12px
+				h2
+					font-size: 16px
+				p
+					font-size: 12px
+			.mini-descr:first-child
+				margin-left: 0
+		.header-chevron
+			p 
+				font-size: 14px
+
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+
