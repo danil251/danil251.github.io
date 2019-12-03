@@ -87,29 +87,29 @@
 		</div>	
 	</header>
 
-<div class="main">
-	<section class="tour js-tour">
+	<div class="main">
+		<section class="tour js-tour">
 
-		
-		<div class="section-title">
-			<h2>Популярные туры</h2>
-		</div>
 
-		<div class="tour__item">
-			<div class="tour__item-img">
-				<img src="img/it_1.png" alt="it">
+			<div class="section-title">
+				<h2>Популярные туры</h2>
 			</div>
-			<div class="tour__item-bot">
-				<div class="tour__item-description">
-					<h3>9-11 сентября</h3>
-					<h4>Путешествие на <br> озеро “Джека Лондона”</h4>
+			<div class="tour__item__wrap">
+				<div class="tour__item">
+					<div class="tour__item-img">
+						<img src="img/it_1.png" alt="it">
+					</div>
+					<div class="item-bot">
+						<div class="item-bot__description">
+							<h3>9-11 сентября</h3>
+							<h4>Путешествие на <br> озеро “Джека Лондона”</h4>
+						</div>
+						<div class="item-bot__price"><h5>10 000 ₽</h5></div>
+						<div class="item-bot__next">
+							<a href="#"><i class="fas fa-arrow-right"></i></a>
+						</div>
+					</div>
 				</div>
-				<div class="tour__item-price"><h5>10 000 ₽</h5></div>
-				<div class="tour__item-next">
-					<a href="#"><i class="fas fa-arrow-right"></i></a>
-				</div>
-<<<<<<< Updated upstream
-=======
 
 				<div class="tour__item_small">
 					<div class="tour__item">
@@ -153,7 +153,7 @@
 		<section class="description">
 
 			<div class="section-title">
-				<h2>Почему стоит поехать с намии</h2>
+				<h2>Почему стоит поехать с нами</h2>
 			</div>
 		<div class="description__wrap">
 			<div class="description__item">
@@ -197,275 +197,183 @@
 				<p>Никто не тратит твое бесценное время</p>
 			</div>
 		</div>
-		
+
+		</section>
 
 
-		<div class="tour-item_small">
-			<div class="tour__item">
-				<div class="tour__item-img">
-					<img src="img/it_2.png" alt="it">
-				</div>
-				<div class="tour__item-bot">
-					<div class="tour__item-description">
-						<h3>6-14 сентября</h3>
-						<h4>Путешествие в Абхазию</h4>
+		<section class="team">
+
+			<div class="section-title">
+				<h2>Наша команда</h2>
+			</div>
+
+			<div class="team__wrap">
+			<div class="team__item">
+				<img src="img/team_it_1.png" alt="#">
+				<div class="team__item__bot">
+					<div class="team__item__bot__description">
+						<h4>Менеджер проектов</h4>
+						<h5>Юлия Ковальчук</h5>
 					</div>
-					<div class="tour__item-price"><h5>10 000 ₽</h5></div>
-					<div class="tour__item-next">
-						<a href="#"><i class="fas fa-arrow-right"></i></a>
+					<div class="team__item__bot__social">
+						<a href="#"><i class="fab fa-vk"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a>					
 					</div>
 				</div>
 			</div>
 
 
-			<div class="tour__item">
-				<div class="tour__item-img">
-					<img src="img/it_3.png" alt="it">
+
+			<div class="team__item">
+				<img src="img/team_it_2.png" alt="#">
+				<div class="team__item__bot">
+					<div class="team__item__bot__description">
+						<h4>Разработчик квестов</h4>
+						<h5>Кирилл Филипов</h5>
+					</div>
+					<div class="team__item__bot__social">
+						<a href="#"><i class="fab fa-vk"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a>					
+					</div>
 				</div>
-				<div class="tour__item-bot">
-					<div class="tour__item-description">
-						<h3>9-11 сентября</h3>
-						<h4>Путешествие на озеро “Байкал”</h4>
+			</div>
+
+
+			<div class="team__item">
+				<img src="img/team_it_3.png" alt="#">
+				<div class="team__item__bot">
+					<div class="team__item__bot__description">
+						<h4>Коммерчиский директор</h4>
+						<h5>Анастасия Афонасенко</h5>
 					</div>
-					<div class="tour__item-price"><h5>10 000 ₽</h5></div>
-					<div class="tour__item-next">
-						<a href="#"><i class="fas fa-arrow-right"></i></a>
+					<div class="team__item__bot__social">
+						<a href="#"><i class="fab fa-vk"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a>					
 					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+	</div>
+
+	<section class="request">
+
+		<div class="section-title">
+			<h2>Оставить заявку</h2>
+		</div>
+		<h3>Оставьте свои данные, мы свяжемся с вами и обсудим детали поездки</h3>
+
+		<form action="https://formspree.io/slipitout@yandex.ru" class="forma" method="POST" target="_blank" novalidate>
+			<label class="form-group">
+				<input type="text" name="name" class="name" placeholder="Ваше имя" data-validation-required-message="Вы не ввели имя" required/>
+				<span class="help-block text-danger"></span>
+			</label>
+			<label class="form-group">
+				<input type="tel" name="tel" class="tel" placeholder="Ваш телефон" data-validation-required-message="Вы не ввели телефон" required/>
+				<span class="help-block text-danger"></span>
+			</label>
+			<div class="button-in">
+				<button>Отправить</button>
+				<h4>Нажимая кнопку "Отправить" <br> вы соглашаетесь на обработку<br> персональных данных</h4>
+			</div>
+		</form>
+
+	</section>
+<div class="main">
+	<section class="reviews">
+		<div class="section-title">
+			<h2>Эмоции людей, которые <br> отправились с нами </h2>
+		</div>
+
+		<div class="personality">
+			<img src="img/avatar_1.png" alt="#">
+			<div class="name">
+				<h3>Полина Устинова</h3>
+				<h4>Путешествие в Марокко</h4> 
+				<div class="social">
+					<a href="#"><i class="fab fa-vk"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>					
 				</div>
 			</div>
 		</div>
-		
+		<h5>“Из года в год путешествия с вами становятся все ярче,
+			а расставания все сентиментальнее...бесспощадно
+			отрывается частичка моей души...
+			Эти 10 дней я запомню на всю свою жизнь!
+		Ценю каждый момент:)”</h5>
 
+
+		<div class="personality">
+			<img src="img/avatar_2.png" alt="#">
+			<div class="name">
+				<h3>Анна Летова</h3>
+				<h4>Путешествие на озеро “Джека Лондона”</h4> 
+				<div class="social">
+					<a href="#"><i class="fab fa-vk"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>					
+				</div>
+			</div>
+		</div>
+		<h5>“Все ребята сделали мой отдых незабываемым!
+			Такое больше не повторится, нужно наслаждаться тем,
+			что происходит сейчас.
+			Спасибо, я реально наслаждалась в эти две недели
+		рядом с вами! Вы в моем сердечке...”</h5>
 
 	</section>
 
-
-
-	<section class="section-descr">
+	<section class="faq">
 
 		<div class="section-title">
-			<h2>Почему стоит поехать с нами</h2>
-		</div>
-		
-		<div class="section-descr__item">
-			<img src="img/descr_it_1.png" alt="#">
-			<h4>Приключение</h4>
-			<p>Делаем не просто путешествие, а приклбчение со своей истроией</p>
-		</div>
-		
-		
-		<div class="section-descr__item">
-			<img src="img/descr_it_2.png" alt="#">
-			<h4>Тебе выдается карта</h4>
-			<p>Эта карта полна квестов и загадочных мест. Проверь себя, сможешь найти их?</p>
-		</div>
-		
-		
-		<div class="section-descr__item">
-			<img src="img/descr_it_3.png" alt="#">
-			<h4>Множество испытаний</h4>
-			<p>Тебя поджидают захатывающие испытания</p>
-		</div>
-		
-		
-		<div class="section-descr__item">
-			<img src="img/descr_it_4.png" alt="#">
-			<h4>Система поощрения</h4>
-			<p>Получаешь награды за квесты</p>
-		</div>
-		
-		
-		<div class="section-descr__item">
-			<img src="img/descr_it_5.png" alt="#">
-			<h4>Трансфер за наш счет</h4>
-			<p>Тебе не нужно тратить время, на бронрование отеля и поиск водителя</p>
-		</div>
-		
+			<h2>Часто задаваемые <br> вопросы</h2>
+		</div>	
 
-		<div class="section-descr__item">
-			<img src="img/descr_it_6.png" alt="#">
-			<h4>Нет скучного гида</h4>
-			<p>Никто не тратит твое бесценное время</p>
-		</div>
-		
+		<h5>Если вы не нашли ответ на свой вопрос <br>
+			оставьте заявку и мы обязательно <br>
+		свяжемся с вами в ближайшее время</h5>
 
+		<button>Оставить заявку</button>	
+
+
+		<div class="block">
+			<div class="title">
+				Сумма за тур указана за одного человека?
+			</div>
+			<div class="content">
+				Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+			</div>
+
+
+			<div class="block">
+				<div class="title">
+					Сумма за тур указана за одного человека?
+				</div>
+				<div class="content">
+					Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+				</div>
+			</div>
+
+			<div class="block">
+				<div class="title">
+					Сумма за тур указана за одного человека?
+				</div>
+				<div class="content">
+					Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+				</div>
+			</div>
+
+			<div class="block">
+				<div class="title">
+					Сумма за тур указана за одного человека?
+				</div>
+				<div class="content">
+					Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+				</div>
+			</div>
+		</div>
 	</section>
-
-
-	<section class="team">
-
-		<div class="section-title">
-			<h2>Наша команда</h2>
-		</div>
-
-		
-		<div class="team-item">
-			<img src="img/team_it_1.png" alt="#">
-			<div class="team-wrap">
-				<div class="team-description">
-					<h4>Менеджер проектов</h4>
-					<h5>Юлия Ковальчук</h5>
-				</div>
-				<div class="social">
-					<a href="#"><i class="fab fa-vk"></i></a>
-					<a href="#"><i class="fab fa-instagram"></i></a>					
-				</div>
-			</div>
-		</div>
-
-
-		
-		<div class="team-item">
-			<img src="img/team_it_2.png" alt="#">
-			<div class="team-wrap">
-				<div class="team-description">
-					<h4>Разработчик квестов</h4>
-					<h5>Кирилл Филипов</h5>
-				</div>
-				<div class="social">
-					<a href="#"><i class="fab fa-vk"></i></a>
-					<a href="#"><i class="fab fa-instagram"></i></a>					
-				</div>
-			</div>
-		</div>
-		
-		
-		<div class="team-item">
-			<img src="img/team_it_3.png" alt="#">
-			<div class="team-wrap">
-				<div class="team-description">
-					<h4>Коммерчиский директор</h4>
-					<h5>Анастасия Афонасенко</h5>
-				</div>
-				<div class="social">
-					<a href="#"><i class="fab fa-vk"></i></a>
-					<a href="#"><i class="fab fa-instagram"></i></a>					
-				</div>
-			</div>
-		</div>
-		
-
-	</div>
-</section>
-
-<section class="request">
-	
-	<div class="section-title">
-		<h2>Оставить заявку</h2>
-	</div>
-	<h3>Оставьте свои данные, мы свяжемся с вами и обсудим детали поездки</h3>
-
-	<form action="https://formspree.io/slipitout@yandex.ru" class="forma" method="POST" target="_blank" novalidate>
-		<label class="form-group">
-			<input type="text" name="name" class="name" placeholder="Ваше имя" data-validation-required-message="Вы не ввели имя" required/>
-			<span class="help-block text-danger"></span>
-		</label>
-		<label class="form-group">
-			<input type="tel" name="tel" class="tel" placeholder="Ваш телефон" data-validation-required-message="Вы не ввели телефон" required/>
-			<span class="help-block text-danger"></span>
-		</label>
-		<div class="button-in">
-			<button>Отправить</button>
-			<h4>Нажимая кнопку "Отправить" <br> вы соглашаетесь на обработку<br> персональных данных</h4>
-		</div>
-	</form>
-
-</section>
-
-<section class="reviews">
-	<div class="section-title">
-		<h2>Эмоции людей, которые <br> отправились с нами </h2>
-	</div>
-	
-	<div class="personality">
-		<img src="img/avatar_1.png" alt="#">
-		<div class="name">
-			<h3>Полина Устинова</h3>
-			<h4>Путешествие в Марокко</h4> 
-			<div class="social">
-				<a href="#"><i class="fab fa-vk"></i></a>
-				<a href="#"><i class="fab fa-instagram"></i></a>					
-			</div>
-		</div>
-	</div>
-	<h5>“Из года в год путешествия с вами становятся все ярче,
-		а расставания все сентиментальнее...бесспощадно
-		отрывается частичка моей души...
-		Эти 10 дней я запомню на всю свою жизнь!
-	Ценю каждый момент:)”</h5>
-	
-
-	<div class="personality">
-		<img src="img/avatar_2.png" alt="#">
-		<div class="name">
-			<h3>Анна Летова</h3>
-			<h4>Путешествие на озеро “Джека Лондона”</h4> 
-			<div class="social">
-				<a href="#"><i class="fab fa-vk"></i></a>
-				<a href="#"><i class="fab fa-instagram"></i></a>					
-			</div>
-		</div>
-	</div>
-	<h5>“Все ребята сделали мой отдых незабываемым!
-		Такое больше не повторится, нужно наслаждаться тем,
-		что происходит сейчас.
-		Спасибо, я реально наслаждалась в эти две недели
-	рядом с вами! Вы в моем сердечке...”</h5>
-
-</section>
-
-<section class="faq">
-	
-	<div class="section-title">
-		<h2>Часто задаваемые <br> вопросы</h2>
-	</div>	
-
-	<h5>Если вы не нашли ответ на свой вопрос <br>
-		оставьте заявку и мы обязательно <br>
-	свяжемся с вами в ближайшее время</h5>
-
-	<button>Оставить заявку</button>	
-
-	
-	<div class="block">
-		<div class="title">
-			Сумма за тур указана за одного человека?
-		</div>
-		<div class="content">
-			Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
-		</div>
-
-
-		<div class="block">
-			<div class="title">
-				Сумма за тур указана за одного человека?
-			</div>
-			<div class="content">
-				Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
-			</div>
-		</div>
-
-		<div class="block">
-			<div class="title">
-				Сумма за тур указана за одного человека?
-			</div>
-			<div class="content">
-				Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
-			</div>
-		</div>
-
-		<div class="block">
-			<div class="title">
-				Сумма за тур указана за одного человека?
-			</div>
-			<div class="content">
-				Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
-			</div>
-		</div>
-	</div>
 </div>
-</section>
-</div>
+
 <footer class="footer">
 	<div class="request">
 		<div class="footer-title">
