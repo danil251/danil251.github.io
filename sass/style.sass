@@ -28,6 +28,7 @@ h2
 	color: #000
 
 h3
+	font-size: 12px
 h4
 h5
 a 
@@ -234,6 +235,9 @@ a
 	background-color: #383838
 	padding-bottom: 60px
 	color: #000
+	&__wrap
+		max-width: 1000px
+		margin: auto
 	h2
 		color: #fff	
 		padding: 0
@@ -268,12 +272,25 @@ a
 			h4
 				margin-left: 25px
 
-		.help-block
-			li
-				color: #fff
-
-
 .reviews
+	&__wrap
+		display: flex
+	&__item
+		border: 1px solid #d1d1d1
+		width: 47%	
+		margin-left: 20px
+	&__personality
+		display: flex
+		line-height: 1.2
+		color: #000
+		img 
+			width: 70px
+			height: 70px
+			margin: 30px 20px
+		&-name 
+				margin-top: 34px
+				margin-left: 15px
+
 	h3 	
 		color: #000
 		font-size: 16px
@@ -286,13 +303,7 @@ a
 		padding: 5px 0
 	h5 
 		padding: 0 0 10px 30px
-	.personality
-		display: flex
-		line-height: 1.2
-		img 
-			width: 70px
-			height: 70px
-			margin: 30px 20px
+
 	.reviews-item
 		border: 1px solid #d1d1d1
 		width: 47%	
@@ -300,10 +311,7 @@ a
 	
 	a 	
 		color: #a6ba00
-	.name 
-		margin-top: 40px
-		margin-left: 15px
-
+	
 
 
 
@@ -405,8 +413,7 @@ a
 	.logo
 		width: 60px
 		height: 55px
-	h3 
-		font-size: 12px
+
 	a
 		color: #fff
 		cursor: pointer
