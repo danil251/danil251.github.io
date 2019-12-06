@@ -5,7 +5,6 @@
 	padding: 0
 body
 	font-size: 14px
-	min-width: 320px
 	position: relative
 	line-height: 1.6
 	font-family: "GothamPro", sans-serif;    
@@ -15,25 +14,24 @@ body
 h2, h3, h4, a
 	color: #000
 h1
-	font-size: 28px
+	
 	font-size: 50px
 	text-transform: uppercase 
 	line-height: 1.1
 	font-family: "GothamPro-Bold", sans-serif; 
 h2
-	padding-top: 70px
-	padding-bottom: 20px
+	margin-top: 70px
+	margin-bottom: 20px
 	font-family: "GothamPro-Bold", sans-serif;
-	font-size: 25px
+	font-size: 28px
 	color: #000
 
 h3
 	font-size: 12px
-h4
-h5
 a 
 	color: #fff
 	text-decoration: none
+
 
 .header
 	background-image: url("../img/bg_header.jpg") 
@@ -56,7 +54,7 @@ a
 			color: #fff
 			margin-right: 50px
 			font-weight: bold
-			font-size: 12px
+			font-size: 14px
 
 	&__language
 		a 
@@ -78,13 +76,9 @@ a
 		justify-content: space-between
 		margin-top: 100px
 		&-left
-			display: flex
-			align-items: start
-			flex-direction: column
 			p
 				font-size: 12px
-				align-self: flex-start
-				padding-top: 10px
+				margin-top: 10px
 		&-right
 			display: flex
 			align-items: center
@@ -93,11 +87,10 @@ a
 				font-size: 35px
 				font-family: "GothamPro-Bold", sans-serif; 
 			p 
-				margin: 0
 				font-size: 12px
-				padding-bottom: 10px
 		&-descr
 			line-height: 1.1
+			margin-bottom: 10px
 
 	&__bottom
 		margin: auto
@@ -107,6 +100,9 @@ a
 		margin-top: 100px
 		padding-bottom: 25px
 		&-arrow
+			a
+				display: flex
+				align-items: center
 			i 
 				font-size: 40px
 				padding-right: 5px
@@ -115,7 +111,7 @@ a
 			display: flex
 			align-items: flex-end
 			a 
-				padding-left: 10px
+				margin-left: 10px
 				i  
 					font-size: 20px
 	
@@ -126,23 +122,24 @@ a
 
 .tour
 	&__item
-		&__wrap
+		height: 100%
+		border: 1px solid #d1d1d1
+		&-wrap
 			display: flex
 		&-img
 			img
 				width: 100%
+				display: block
 		&_small
 			margin-left: 20px
-			.item-bot
+			border: none
+			.tour__item
 				margin-bottom: 20px
-	.item
-		&-bot
-			border-left: 1px solid #d1d1d1
-			border-bottom: 1px solid #d1d1d1
+		&-bottom
 			display: flex
-			&__description
-				flex-basis: 66%
-				padding-left: 15px
+			justify-content: space-between 
+			&-description
+				margin-left: 15px
 			h3
 				font-size: 12px
 				color: #A0DC00
@@ -154,19 +151,19 @@ a
 				line-height: 11px
 				margin: 0
 				font-family: "GothamPro-Bold", sans-serif;
-			&__price
+			&-price
 				background-color: #333333
 				color: #fff
-				h5
-					margin: 20px 9px
-					font-size: 12px
-			&__next	
 				display: flex
-				flex-basis: 16.5%
-				justify-content: center
 				align-items: center
-				font-size: 30px
-				background-color: #A6BA00
+				a 
+					display: flex
+					font-size: 30px
+					background-color: #A6BA00
+					padding: 14px
+				span
+					padding: 18px 9px
+					
 
 
 
@@ -179,18 +176,26 @@ a
 	&__item
 		border: 1px solid #d1d1d1
 		padding: 45px
-		width: 22%
+		width: 23%
 		line-height: 1.2
-		margin: 10px
+		margin: 0 16px 16px 0
+		text-align: center
+		&:nth-child(3n)
+			margin-right: 0
 		img 
-			width: 62px
+			display: block
+			object-fit: cover
+			max-width: 100%
+			margin: 0 auto
+			margin-bottom: 5px
 		h4
 			color: #000
-			font-size: 14px
+			font-size: 16px
 			font-family: "GothamPro-Bold", sans-serif;
+			margin-bottom: 5px
 		p
 			color: #6d6d6d
-			font-size: 12px
+		
 	
 
 
@@ -200,38 +205,39 @@ a
 		display: flex
 	&__item
 		margin-right: 20px
+		border: 1px solid #d1d1d1
+		&:last-child
+			margin: 0
 		img 
 			width: 100%
 			height: 270px
 			object-fit: cover
-		&__bot
+			display: block
+		&-bottom
 			display: flex
 			justify-content: space-between
 			align-items: center
 			padding: 10px
-			border-right: 1px solid #d1d1d1
-			border-left: 1px solid #d1d1d1
-			border-bottom: 1px solid #d1d1d1
-			&__description
-				h4
-					color: #6d6d6d
-					font-size: 12px
-					padding: 0
-					margin: 0
-				h5
-					color: #000
-					font-size: 13px
-					padding: 0
-					margin: 0
-					font-family: "GothamPro-Bold", sans-serif;
-			&__social
+			&-description
+
+			&-vacancy
+				color: #6d6d6d
+				font-size: 16px
+				display: block
+			&-name
+				color: #000
+				font-size: 14px
+				font-family: "GothamPro-Bold", sans-serif;
+				display: block
+			&-social
 				a 
 					color: #a8bc07
 				i 
 					font-size: 16px
 
 .request
-	margin-top: 100px
+	margin-top: 70px
+	padding-top: 20px
 	background-color: #383838
 	padding-bottom: 60px
 	color: #000
@@ -239,18 +245,11 @@ a
 		max-width: 1000px
 		margin: auto
 	h2
-		color: #fff	
-		padding: 0
-		margin: 0
-		margin-top: 40px
-	h3
-		font-size: 12px
+		color: #fff
+		margin: 50px 0 10px 0
+	p
+		font-size: 14px
 		margin: 0 0 20px 0
-	h4
-		font-size: 12px
-		line-height: 1.2
-		margin: 0
-	h3, h4
 		color: #909090
 	button
 		background-color: #a6ba00
@@ -258,6 +257,8 @@ a
 		border-radius: 5px
 		width: 150px
 		height: 50px
+
+
 	.tel, .name
 		width: 290px
 		height: 50px
@@ -269,132 +270,161 @@ a
 		justify-content: space-between 
 		.button-in
 			display: flex
-			h4
-				margin-left: 25px
+		.agreement
+			font-size: 12px
+			line-height: 1.2 
+			margin-left: 25px
+		input
+			font-size: 16px
 
 .reviews
 	&__wrap
 		display: flex
 	&__item
 		border: 1px solid #d1d1d1
-		width: 47%	
-		margin-left: 20px
-	&__personality
-		display: flex
-		line-height: 1.2
-		color: #000
-		img 
-			width: 70px
-			height: 70px
-			margin: 30px 20px
-		&-name 
-				margin-top: 34px
-				margin-left: 15px
+		&:first-child
+			margin-right: 20px
+		p 
+			padding: 0 30px 30px 30px
+			color: #636363
+		&-personality
+			display: flex
+			color: #000
+			img 
+				width: 70px
+				height: 70px
+				margin: 30px 20px
+			&-author
+				display: flex
+				flex-direction: column 
+				justify-content: center
+				&-name 
+					font-size: 18px
+					color: #000
+					font-weight: bold			
+				&-route
+					font-size: 16px
+			&-social
+				font-size: 16px
+				a
+					color: #a6ba00
 
-	h3 	
-		color: #000
-		font-size: 16px
-	h4
-		font-size: 12px
-	h4, h5
-		color: #636363
-	h4, h3
-		margin: 0
-		padding: 5px 0
-	h5 
-		padding: 0 0 10px 30px
-
-	.reviews-item
-		border: 1px solid #d1d1d1
-		width: 47%	
-		margin-left: 20px
-	
-	a 	
-		color: #a6ba00
 	
 
 
 
 .faq
-	.section-title
-		h2
-			margin-left: 0
-	button
-		background-color: #a6ba00
-		color: #000
-		font-style: 12px
-		padding: 0 30px
-		border: none
-		border-radius: 5px
-		height: 45px
-	h5 
-		color: #6d6d6d
-		font-size: 12px
-
-
-.block
-	user-select: none
-	color: #000
-	background-color: #fff
-	border: 1px solid #f0f0f0
-	margin: 20px auto 0
-	
-	.title
-		cursor: pointer
-		padding: 10px 25px
-		position: relative
+	margin-top: 70px
+	&__wrap
 		display: flex
+	&__left
+		width: 97%
+		display: flex
+		flex-direction: column
 		justify-content: space-between
-		color: #000
-		font-family: "GothamPro-Bold", sans-serif;
-		font-size: 13px
-		&:after, .active:after
-			content: ""
-			position: absolute
-			width: 15px
-			height: 15px
-			right: 10px
+		&-text
+			color: #6d6d6d
+			font-size: 12px
+			line-height: 1.1
+		&-button
+			background-color: #a6ba00
+			color: #000
+			font-size: 16px
+			padding: 0 30px
+			border: none
+			border-radius: 5px
+			width: 200px
+			height: 50px
+		h2
+			margin: 0
+	&__right
+		width: 97%
+		&-block
+			user-select: none
+			color: #000
+			background-color: #fff
+			border: 1px solid #f0f0f0
+			margin: 20px auto 0
+			&-title
+				cursor: pointer
+				padding: 10px 25px
+				position: relative
+				display: flex
+				justify-content: space-between
+				color: #000
+				font-family: "GothamPro-Bold", sans-serif;
+				font-size: 13px
+				&:after, .active:after
+					content: ""
+					position: absolute
+					width: 15px
+					height: 15px
+					right: 10px
+				&:after 
+					background: url("../img/plus.png") no-repeat
+					top: 15px
+			.active:after 
+				background: url("../img/minus.png") no-repeat
+				top: 21px 
+			.active:before
+				content: ""
+				height: 1px
+				left: 25px
+				margin-top: 35px
+				position: absolute
+				width: 300px
+				background-color: #f0f0f0
+				color: #000
+				font-family: "GothamPro-Bold", sans-serif;
+			&-content
+				padding: 10px 25px
+				font-size: 14px
+				display: none
+			.faq__right-block-title.active + .faq__right-block-content
+				display: block
 
-		&:after 
-			background: url("../img/plus.png") no-repeat
-			top: 15px
 
-	.active:after 
-		background: url("../img/minus.png") no-repeat
-		top: 21px 
-	.active:before
-		content: ""
-		height: 1px
-		left: 25px
-		margin-top: 35px
-		position: absolute
-		width: 300px
-		background-color: #f0f0f0
-		color: #000
-		font-family: "GothamPro-Bold", sans-serif;	
-	.content
-		padding: 10px 25px
-		font-size: 14px
-		display: none
-	
-	.title.active + .content
-		display: block
-
-.block:first-child
-	margin-top: 100px
 
 
 
 .footer
 	margin-top: 80px
 	background-color: #383838
+	h2, h3
+		color: #fff
+	&__wrap
+		max-width: 1000px
+		margin: 0 auto
+		padding-top: 1px
+		padding-bottom: 20px
+	&__bot
+		display: flex
+		justify-content: space-between
+		margin-top: 15px
+		color: #fff
+		&-copyright
+			img 
+				width: 60px
+				height: 55px
+		&-nav
+			a
+			color: #fff
+			cursor: pointer
+			ul
+				margin: 0
+				font-size: 13px
+			li 
+				list-style-type: none
+		&-contacts
+		&-social
+		&-arrow
+			i
+				background-color: #a6ba00
+				font-size: 60px
+				border-radius: 5px
 	.request
 		margin-top: 0
 		position: relative
-		.help-block
-			li
-				color: #fff
-				list-style-type: disc 
 	.forma:after 
 		content: ""
 		position: absolute
@@ -403,36 +433,10 @@ a
 		height: 1px
 		left: 0
 		margin-top: 100px
-	.footer-bot
-		display: flex
-		flex-wrap: wrap
-		font-size: 13px
-		display: flex
-		margin-top: 25px
-		margin-bottom: 30px
-	.logo
-		width: 60px
-		height: 55px
 
-	a
-		color: #fff
-		cursor: pointer
-		ul
-			margin: 0
-			font-size: 13px
-		li 
-			list-style-type: none
-	.footer-nav
-		ul
-			padding: 0
-			margin: 0
-	.footer-social
-		p
-			margin: 0
-	.arrow
-		img 
-			width: 45px
-			border-radius: 5px
+
+
+
 		
 
 
