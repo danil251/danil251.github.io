@@ -32,11 +32,11 @@
 			</div>
 
 			<nav class="header__nav">
-				<a href="#" class="header__nav-link">Главная</a>
-				<a href="#" class="header__nav-link">Туры</a>
-				<a href="#" class="header__nav-link">О нас</a>
-				<a href="#" class="header__nav-link">Отзывы</a>
-				<a href="#" class="header__nav-link">Контакты</a>
+				<a href="#header" class="header__nav-link">Главная</a>
+				<a href="#tour" class="header__nav-link">Туры</a>
+				<a href="#description" class="header__nav-link">О нас</a>
+				<a href="#reviews" class="header__nav-link">Отзывы</a>
+				<a href="#footer" class="header__nav-link">Контакты</a>
 			</nav>
 
 			<div class="header__language">
@@ -45,9 +45,28 @@
 			</div>
 
 			<div class="header__phone">
-				<a href="tel+79138888888" class="phone">+7 999 123-45-57</a>
-				<a href="tel+79138888888"><i class="fas fa-phone"></i></a>
+				<a href="tel+79138888888" class="header__phone-number">+7 999 123-45-57</a>
+				<a href="tel+79138888888" class="header__phone-icon"><i class="fas fa-phone"></i></a>
 			</div>
+
+			<!-- sandwich menu -->
+			<button class="toggle_mnu">
+				<span class="sandwich">
+					<span class="sw-topper"></span>
+					<span class="sw-bottom"></span>
+					<span class="sw-footer"></span>
+				</span>
+			<nav class="top_mnu">
+					<ul>
+						<li><a href="#header">Главная</a></li>
+						<li><a href="#tour">Туры</a></li>
+						<li><a href="#description">О нас</a></li>
+						<li><a href="#reviews">Отзывы</a></li>
+						<li><a href="#footer">Контакты</a></li>
+					</ul> 
+			</nav>
+			</button>
+
 		</div>
 
 		<div class="header__content">
@@ -132,7 +151,7 @@
 						<div class="tour__item-bottom">
 							<div class="tour__item-bottom-description">
 								<h3>9-11 сентября</h3>
-								<h4>Путешествие на озеро “Байкал”</h4>
+								<h4>Путешествие на озеро <br> “Байкал”</h4>
 							</div>
 							<div class="tour__item-bottom-price"><span>10 000 ₽</span>
 								<a href="#"><i class="fas fa-arrow-right"></i></a>
@@ -145,7 +164,7 @@
 
 
 
-		<section class="description">
+		<section class="description" id="description">
 
 			
 			<h2>Почему стоит поехать с нами</h2>
@@ -196,7 +215,7 @@
 		</section>
 
 
-		<section class="team">
+		<section class="team" id="team">
 
 			<h2>Наша команда</h2>
 
@@ -249,7 +268,7 @@
 		</section>
 	</div>
 
-	<section class="request">
+	<section class="request" id="request">
 		<div class="request__wrap">
 			<h2>Оставить заявку</h2>
 			
@@ -268,7 +287,7 @@
 
 	<div class="main">
 
-		<section class="reviews">
+		<section class="reviews" id="reviews">
 
 			<h2>Эмоции людей, которые <br> отправились с нами </h2>
 
@@ -312,14 +331,15 @@
 			</div>
 		</section>
 
-		<section class="faq">
+		<section class="faq" id="faq">
 			<div class="faq__wrap">
 				<div class="faq__left">
 					<h2>Часто задаваемые <br> вопросы</h2>
+				<div class="faq__left-block">
+					<span class="faq__left-block-text">Если вы не нашли ответ на свой вопрос <br> оставьте заявку и мы обязательно <br> свяжемся с вами в ближайшее время</span>
 
-					<span class="faq__left-text">Если вы не нашли ответ на свой вопрос <br> оставьте заявку и мы обязательно <br> свяжемся с вами в ближайшее время</span>
-
-					<button class="faq__left-button">Оставить заявку</button>	
+					<button class="faq__left-block-button">Оставить заявку</button>
+				</div>	
 				</div>
 				<div class="faq__right">
 					<div class="faq__right-block">
@@ -360,29 +380,29 @@
 		</section>
 	</div>
 
-	<footer class="footer">
+	<footer class="footer" id="footer">
 		<div class="footer__wrap">	
-				<h2>Оставить заявку</h2>
-				<span class="foter__wrap-text">Оставьте свои данные, мы свяжемся с вами и обсудим детали поездки</span>
+			<h2>Оставить заявку</h2>
+			<span class="foter__wrap-text">Оставьте свои данные, мы свяжемся с вами и обсудим детали поездки</span>
 
 			<div class="request">
-			<form action="https://formspree.io/slipitout@yandex.ru" class="forma" method="POST" target="_blank">
+				<form action="https://formspree.io/slipitout@yandex.ru" class="forma" method="POST" target="_blank">
 					<input type="text" name="name" class="name" placeholder="Ваше имя" required/>
 					<input type="tel" name="tel" class="tel" placeholder="Ваш телефон" required/>
-				<div class="button-in">
-					<button>Отправить</button>
-					<p class="agreement">Нажимая кнопку "Отправить" <br> вы соглашаетесь на обработку<br> персональных данных</p>
-				</div>
-			</form>
+					<div class="button-in">
+						<button>Отправить</button>
+						<p class="agreement">Нажимая кнопку "Отправить" <br> вы соглашаетесь на обработку<br> персональных данных</p>
+					</div>
+				</form>
 			</div>
 
 
-			<div class="footer__bot">
-				<div class="footer__bot-copyright">
+			<div class="footer__bottom">
+				<div class="footer__bottom-copyright">
 					<img src="img/logo.png" alt="logo" class="logo">
 					<h3>&copy; B-Travel All right reserved</h3>
 				</div>
-				<div class="footer__bot-nav">
+				<div class="footer__bottom-nav">
 					<ul>
 						<li><a href="#">Главная</a></li>
 						<li><a href="#">Туры</a></li>
@@ -391,25 +411,25 @@
 						<li><a href="#">Контакты</a></li>
 					</ul>
 				</div>
-				<div class="footer__bot-contacts">
+				<div class="footer__bottom-contacts">
 					+7913 100-60-82
-					info@btravelgroup.ru <br>
-					Томск, Лыткина 12б <br>
+					info@btravelgroup.ru 
+					Томск, Лыткина 12б 
 					4 Этаж, комната 440 
 				</div>
-				<div class="footer__bot-social">
+				<div class="footer__bottom-social">
 					<p>Социальные сети</p>
 					<a href="#"><i class="fab fa-vk"></i></a>
 					<a href="#"><i class="fab fa-instagram"></i></a>
 				</div>
-				<div class="footer__bot-arrow">
-					<a href="#header"><i class="fas fa-arrow-up"></i></a>
+				<div class="footer__bottom-arrow">
+					<a href="#header"><i class="fas fa-caret-square-up"></i></i></a>
 				</div>
 
 			</div>
-				
 
-</div>
+
+		</div>
 	</footer>
 
 

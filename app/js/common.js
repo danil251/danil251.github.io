@@ -1,3 +1,12 @@
+let btn = document.querySelector(".toggle_mnu")
+let sandwich = document.querySelector(".sandwich");
+
+btn.addEventListener("click", function() {
+
+	sandwich.classList.toggle("active");
+
+});
+
 
 const anchors = document.querySelectorAll('a[href*="#"]')
 

@@ -18,13 +18,16 @@ h1
 	font-size: 50px
 	text-transform: uppercase 
 	line-height: 1.1
-	font-family: "GothamPro-Bold", sans-serif; 
+	font-family: "GothamPro-Bold", sans-serif;
+	@media (max-width: 650px)
+		font-size: 35px
 h2
 	margin-top: 70px
 	margin-bottom: 20px
 	font-family: "GothamPro-Bold", sans-serif;
 	font-size: 28px
 	color: #000
+	line-height: 28px
 
 h3
 	font-size: 12px
@@ -45,6 +48,13 @@ a
 		width: 100%
 		max-width: 1170px
 		margin: 0 auto
+	@media (max-width: 992px)
+		&__nav, &__language, &__phone
+			visibility: hidden
+		.logo
+			margin-left: 40px
+		
+
 	.logo
 		&__img	
 			width: 60px
@@ -55,6 +65,8 @@ a
 			margin-right: 50px
 			font-weight: bold
 			font-size: 14px
+			&:hover
+				border-bottom: 1px solid #fff
 
 	&__language
 		a 
@@ -63,18 +75,22 @@ a
 		justify-self: center
 		a 
 			font-size: 12px
-	&__phone:focus
-		color: #fff
-	&__phone:hover
-		color: #fff
+		&-icon
+			display: none
+
 
 
 	&__content
-		margin: auto
+		margin: 0 auto
 		max-width: 830px
 		display: flex
 		justify-content: space-between
-		margin-top: 100px
+		margin-top: 80px
+		@media (max-width: 992px)	
+			justify-content: space-around
+		@media (max-width: 480px)
+				flex-direction: column
+				align-items: center
 		&-left
 			p
 				font-size: 12px
@@ -83,6 +99,8 @@ a
 			display: flex
 			align-items: center
 			flex-direction: column
+			@media (max-width: 650px)
+				display: none
 			span	
 				font-size: 35px
 				font-family: "GothamPro-Bold", sans-serif; 
@@ -91,7 +109,6 @@ a
 		&-descr
 			line-height: 1.1
 			margin-bottom: 10px
-
 	&__bottom
 		margin: auto
 		max-width: 830px
@@ -99,10 +116,16 @@ a
 		justify-content: space-between
 		margin-top: 100px
 		padding-bottom: 25px
+		@media (max-width: 992px)	
+			justify-content: space-around
 		&-arrow
 			a
 				display: flex
 				align-items: center
+				&:hover
+					color: rgba(lighten(#A6BA00, 2%), .8)
+					transition-duration: .2s
+
 			i 
 				font-size: 40px
 				padding-right: 5px
@@ -114,18 +137,151 @@ a
 				margin-left: 10px
 				i  
 					font-size: 20px
+					&:hover
+						color: rgba(lighten(#A6BA00, 2%), .8)
+						transition-duration: .2s
+		
+.toggle_mnu
+	width: 50px
+	height: 50px
+	position: fixed
+	z-index: 100
+	border: none
+	right: 20px
+	top: 20px
+	display: none
+	@media (max-width: 992px)
+		display: block
+	span
+		display: block
+	
+
+$w: 18px
+$h: 2px
+
+.sandwich 
+	width: $w
+	height: $w
+	position: absolute
+	top: 4px
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	z-index: 200
+.sandwich.active + .top_mnu
+	display: flex
+	justify-content: center
+	align-items: center 
+
+.sw-topper
+	position: relative
+	top: 0
+	width: $w 
+	height: $h
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	display: block
+
+
+
+svg
+	path
+		fill: #e0e0e0
+
+.sw-bottom
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 2.2
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	transition-delay: 0.2s, 0s
+.sw-footer
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 4
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: all 0.5s
+	transition-delay: 0.1s
+.sandwich.active
+
+	.sw-topper
+		top: 7px
+		transform: rotate(-45deg)
+	.sw-bottom
+		top: 5px
+		transform: rotate(45deg)
+	.sw-footer
+		opacity: 0
+		top: 0
+		transform: rotate(180deg)
+
+
+
+.top_mnu
+	position: fixed
+	width: 100%
+	height: 100%
+	background-color: rgba(0,0,0,.85)
+	z-index: 50
+	right: 0
+	top: 0
+	display: none
+	ul,
+	li
+		list-style-type: none
+		padding: 0
+		margin: 0
+	ul
+		margin-top: 50px
+		text-align: center
+		display: flex
+		flex-direction: column
+		a
+			color: #fff
+			display: block
+			text-transform: uppercase
+			font-size: 18px
+			position: relative
+			height: 60px
+			outline: none
+			span
+				display: block
+				position: relative
+				top: -100px
+				left: 0
+				height: 100%
+				+transition(all 0.5s ease)
+
 	
 .main
 	max-width: 1000px
 	margin: auto
+	@media (max-width: 992px)	
+		margin: 0 40px
+	@media (max-width: 480px)
+		margin: 0 20px
+
 
 
 .tour
 	&__item
 		height: 100%
 		border: 1px solid #d1d1d1
+		@media (max-width: 992px)
+			margin-bottom: 30px
 		&-wrap
 			display: flex
+			@media (max-width: 992px)
+				flex-direction: column
 		&-img
 			img
 				width: 100%
@@ -133,6 +289,8 @@ a
 		&_small
 			margin-left: 20px
 			border: none
+			@media (max-width: 992px)
+				margin: 0
 			.tour__item
 				margin-bottom: 20px
 		&-bottom
@@ -161,6 +319,9 @@ a
 					font-size: 30px
 					background-color: #A6BA00
 					padding: 14px
+					&:hover
+						background-color: rgba(lighten(#A6BA00, 2%), .8)
+						transition-duration: .2s
 				span
 					padding: 18px 9px
 					
@@ -172,7 +333,8 @@ a
 	&__wrap
 		display: flex
 		flex-wrap: wrap
-	
+		@media (max-width: 992px)
+			justify-content: center	
 	&__item
 		border: 1px solid #d1d1d1
 		padding: 45px
@@ -182,6 +344,21 @@ a
 		text-align: center
 		&:nth-child(3n)
 			margin-right: 0
+		@media (max-width: 992px)
+			margin: 0 30px 30px 0
+			&:nth-child(3n)
+				margin-right: 30px
+		@media (max-width: 768px)
+			width: 26%
+			&:nth-child(2n)
+				margin-right: 0
+		@media (max-width: 526px)
+			width: 50%
+			margin-right: 0
+			&:nth-child(3n)
+				margin-right: 0
+
+				
 		img 
 			display: block
 			object-fit: cover
@@ -203,11 +380,18 @@ a
 	line-height: 1.2
 	&__wrap
 		display: flex
+		@media (max-width: 992px)
+			flex-wrap: wrap
+			justify-content: center
 	&__item
 		margin-right: 20px
 		border: 1px solid #d1d1d1
 		&:last-child
 			margin: 0
+		@media (max-width: 992px)
+			margin: 20px
+			&:last-child
+				margin: 20px
 		img 
 			width: 100%
 			height: 270px
@@ -233,7 +417,10 @@ a
 				a 
 					color: #a8bc07
 				i 
-					font-size: 16px
+					font-size: 18px
+					&:hover
+						color: rgba(lighten(#A6BA00, 2%), .8)
+						transition-duration: .2s
 
 .request
 	margin-top: 70px
@@ -242,8 +429,13 @@ a
 	padding-bottom: 60px
 	color: #000
 	&__wrap
-		max-width: 1000px
-		margin: auto
+		max-width: 992px
+		margin: 0 auto
+		@media (max-width: 992px)
+			width: 60vw
+			display: flex
+			flex-direction: column
+			align-items: center
 	h2
 		color: #fff
 		margin: 50px 0 10px 0
@@ -254,20 +446,19 @@ a
 	button
 		background-color: #a6ba00
 		border: none
+		cursor: pointer
+		font-size: 16px
 		border-radius: 5px
 		width: 150px
 		height: 50px
-
-
-	.tel, .name
-		width: 290px
-		height: 50px
-		border-radius: 5px 
-		border: none
-		text-align: center
+		&:hover
+			background-color: rgba(lighten(#A6BA00, 2%), .8)
+			transition-duration: .2s
 	.forma
 		display: flex
 		justify-content: space-between 
+		@media (max-width: 992px)
+			flex-direction: column
 		.button-in
 			display: flex
 		.agreement
@@ -276,14 +467,26 @@ a
 			margin-left: 25px
 		input
 			font-size: 16px
+			width: 290px
+			height: 50px
+			border-radius: 5px 
+			border: none
+			text-align: center
+			@media (max-width: 992px)
+				width: 100%
+				margin-bottom: 20px
 
 .reviews
 	&__wrap
 		display: flex
+		@media (max-width: 768px)
+			flex-direction: column
 	&__item
 		border: 1px solid #d1d1d1
 		&:first-child
 			margin-right: 20px
+		@media (max-width: 768px)
+			margin: 20px
 		p 
 			padding: 0 30px 30px 30px
 			color: #636363
@@ -298,6 +501,7 @@ a
 				display: flex
 				flex-direction: column 
 				justify-content: center
+				margin: 10px
 				&-name 
 					font-size: 18px
 					color: #000
@@ -317,34 +521,54 @@ a
 	margin-top: 70px
 	&__wrap
 		display: flex
+		justify-content: space-between
+		@media (max-width: 768px)
+			flex-direction: column	
 	&__left
-		width: 97%
 		display: flex
 		flex-direction: column
-		justify-content: space-between
-		&-text
-			color: #6d6d6d
-			font-size: 12px
-			line-height: 1.1
-		&-button
-			background-color: #a6ba00
-			color: #000
-			font-size: 16px
-			padding: 0 30px
-			border: none
-			border-radius: 5px
-			width: 200px
-			height: 50px
+		flex-basis: 50%	
+		@media (max-width: 768px)
+			flex-direction: row
+			justify-content: space-around
+		@media (max-width: 480px)
+			flex-direction: column
+			align-items: center
+		&-block
+			display: flex
+			flex-direction: column
+			&-text
+				color: #6d6d6d
+				font-size: 12px
+				line-height: 1.1
+				margin-bottom: 60px	
+				@media (max-width: 768px)
+					margin-bottom: 30px	
+			&-button
+				background-color: #a6ba00
+				color: #000
+				font-size: 16px
+				padding: 0 30px
+				border: none
+				border-radius: 5px
+				width: 200px
+				height: 50px
+				&:hover
+					background-color: rgba(lighten(#A6BA00, 2%), .8)
+					transition-duration: .2s
 		h2
-			margin: 0
+			margin: 0 20px 35px 0
+
 	&__right
-		width: 97%
+		flex-basis: 50%
+		@media (max-width: 768px)
+			margin-top: 40px
 		&-block
 			user-select: none
 			color: #000
 			background-color: #fff
 			border: 1px solid #f0f0f0
-			margin: 20px auto 0
+			margin: 0 auto 20px
 			&-title
 				cursor: pointer
 				padding: 10px 25px
@@ -396,16 +620,22 @@ a
 		max-width: 1000px
 		margin: 0 auto
 		padding-top: 1px
-		padding-bottom: 20px
-	&__bot
+		padding-bottom: 40px
+		@media (max-width: 992px)
+			margin: 0 40px
+	&__bottom
 		display: flex
 		justify-content: space-between
 		margin-top: 15px
 		color: #fff
+		@media (max-width: 992px)
+			flex-wrap: wrap
 		&-copyright
 			img 
 				width: 60px
 				height: 55px
+			@media (max-width: 480px)
+				margin: 0 20px 20px 0
 		&-nav
 			a
 			color: #fff
@@ -415,13 +645,23 @@ a
 				font-size: 13px
 			li 
 				list-style-type: none
+			@media (max-width: 768px)
+				display: none
 		&-contacts
+			flex-basis: 20%
+			@media (max-width: 480px)
+				margin-right: 20px
 		&-social
+			@media (max-width: 768px)
+				display: none
 		&-arrow
 			i
-				background-color: #a6ba00
+				color: #a6ba00
 				font-size: 60px
 				border-radius: 5px
+				&:hover
+					color: rgba(lighten(#A6BA00, 2%), .8)
+					transition-duration: .2s
 	.request
 		margin-top: 0
 		position: relative
@@ -433,6 +673,9 @@ a
 		height: 1px
 		left: 0
 		margin-top: 100px
+		@media (max-width: 992px)
+			visibility: hidden
+
 
 
 
@@ -440,209 +683,6 @@ a
 		
 
 
-
-
-
-
-@media only screen and (max-width : 1200px)
-	/**/
-
-
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)		
-	.header 	
-		.header-left 	
-			h1 	
-				margin-left: 110px
-				font-size: 40px
-		.header-chevron
-			a 
-				margin-left: 10px
-		.header-social
-			padding-left: 170px
-	.tour 
-		.item-bot 
-			.section-item__description 
-				flex-basis: 65.5%
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
-	.header 
-		min-height: 560px
-		.header-nav, .header-language
-			margin-top: 15px
-		.fa-phone
-			margin-top: 17px
-		.header-nav__link
-			margin-right: 20px
-		.header-nav__link:last-child
-			margin-right: 0
-		.header-left 	
-			h1 	
-				font-size: 35px
-				margin-top: 35px
-		.header-chevron
-			padding: 30px 0
-		.header-social
-			padding: 45px 0 0 115px 	
-		.phone 
-			display: none
-		.fa-phone
-			display: block
-	.tour
-		.item-bot 
-			.section-item__description
-				flex-basis: 53.5%
-		.small 
-			margin-bottom: 14px
-	.section-descr
-		.section-descr__item
-			padding: 20px
-	.section-item__small
-		.section-item__img
-			img 
-				height: 130px
-
-	.team 
-		img
-			height: 210px
-		h5 
-			font-size: 12px
-
-	.request
-		display: flex
-		align-items: center
-		align-content: center 
-		justify-content: center
-		overflow: auto
-		.forma
-			margin-left: 180px
-			display: flex
-			flex-direction: column 
-			input 
-				margin: 10px 0
-				width: 370px
-			h4
-				margin: 5px 0 0 50px
-			// .button-in
-			// 	display: flex
-
-	.footer 
-		.request
-			h2 
-				margin: 0
-		.forma
-			margin: 0
-		.forma:after 
-			display: none
-		.request
-			.forma
-				button
-					margin: 0
-		.request:before 
-			content: ''
-			width: 100%
-			background-color: #494546
-			height: 1px
-			position: absolute
-			margin-top: 135px
-		.arrow
-			display: flex
-			justify-content: center
-		.col-xs-6
-			margin-bottom: 20px
-
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
-
-	.header 
-		// .header-nav, .header-language
-		// 	margin-top: 15px
-		.fa-phone
-			margin-top: 17px
-		.header-nav__link
-			margin-left: 8px
-			margin-right: 0
-		.header-left
-			display: flex
-			align-items: center
-			h1 	
-				margin-left: 0
-			p 
-				padding-left: 45px
-		.header-right 	
-			display: flex
-			flex-direction: row
-			align-items: flex-start
-		.header-language
-			display: none
-		.mini-descr
-			margin-left: 30px
-		.header-chevron, .header-social
-			display: flex
-			justify-content: center
-			margin: 0
-			padding-left: 0
-
-	.tour
-		.item-bot 
-			.section-item__description
-				flex-basis: 64%
-		.section-item__small
-			margin-top: 0px
-			.small
-				margin: 30px 0
-	.section-descr 
-		.section-descr__item 
-			margin: 0 70px
-	.team
-		.team-item
-			margin: 20px 70px
-
-	.request
-		.forma
-			display: flex
-			align-items: center
-			margin: 0
-			input 
-				margin: 10px 0
-				width: 250px
-			h4
-				margin: 5px 0 0 50px
-				font-size: 8px
-			button
-				margin-left: 52px
-	.reviews 
-		.reviews-item
-			width: 92%
-			margin-bottom: 30px
-	.block:first-child 
-		margin-top: 60px
-
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
-	.header
-		.col-sm-6
-			padding: 0 5px 
-		.header-left
-			p 
-				padding-left: 0
-		.header-right
-			.mini-descr
-				margin-left: 12px
-				h2
-					font-size: 16px
-				p
-					font-size: 12px
-			.mini-descr:first-child
-				margin-left: 0
-		.header-chevron
-			p 
-				font-size: 14px
-
-
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px)
-	/**/
 
 
 
